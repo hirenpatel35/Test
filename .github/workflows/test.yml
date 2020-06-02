@@ -31,3 +31,11 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+        
+    - name: Upload File
+      id: upload
+      uses: JantHsueh/upload-file-action@master
+      with:
+        url: https://www.pgyer.com/apiv2/app/upload
+        forms: '{"_api_key":"${{ secrets.pgyer_key }}","buildInstallType":3}'
+        fileForms: '{"file":"app/build/outputs/apk/release/app-release.apk"}'
