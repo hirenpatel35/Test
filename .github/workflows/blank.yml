@@ -44,6 +44,6 @@ jobs:
         # FTP Hostname
         port:  ${{ secrets.FTP_PORT }}
         # Path to file to upload
-        src: /newfile.txt
+        src: https://github.com/hirenpatel35/Test/blob/master/newfile.txt
         # Destination file path on FTP remote
         dest: /va/va-psd-dev/static
