@@ -46,5 +46,4 @@ jobs:
         # Path to file to upload
         src: Hello.txt
         # Destination file path on FTP remote
-        dest: /static
-       
+        dest: /static    
