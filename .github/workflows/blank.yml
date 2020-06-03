@@ -46,4 +46,4 @@ jobs:
         # Path to file to upload
         src: newfile.txt
         # Destination file path on FTP remote
-        dest: /va/va-psd-dev/static/hello.txt    
+        dest: /va/va-psd-dev/static
