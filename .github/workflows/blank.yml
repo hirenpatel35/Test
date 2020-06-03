@@ -31,21 +31,14 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
-    - name: Simple FTP deploy
-      uses: kevinpainchaud/simple-ftp-deploy-action@v1.0.1
+    - name: FTP Deploy
+      uses: SamKirkland/FTP-Deploy-Action@3.1.1
       with:
-        # FTP host
-        ftp_host:  ${{ secrets.FTP_HOST }}
-        # FTP username
-        ftp_username: ${{ secrets.FTP_USER }}
-        # FTP password
-        ftp_password: ${{ secrets.FTP_PASSWORD }}
-        # The local folder to copy
-        local_source_dir: "https://github.com/hirenpatel35/Test/blob/master/newfile.txt"
-        # The remote folder
-        dist_target_dir: "/va/va-psd-dev/static/newfile.txt"
-        # Delete files not present in the local folder on the remote folder
-        delete: false
-        # Disable SSL certificate verification
-        disable_ssl_certificate_verification: true 
-    
+        # Deployment destination server & path. Formatted as protocol://domain.com:port/full/destination/path/
+        ftp-server: ${{ secrets.FTP_FullPath }}
+        # FTP account username
+        ftp-username: ${{ secrets.FTP_USER }}
+        # FTP account password
+        ftp-password:  ${{ secrets.FTP_PASSWORD }}
+        # The local folder to copy, defaults to root project folder
+        #local-dir: # optional, default is ./
