@@ -47,3 +47,4 @@ jobs:
         src: Hello.txt
         # Destination file path on FTP remote
         dest: /static
+       
