@@ -36,4 +36,4 @@ jobs:
         # FTP password
         password: ${{ secrets.FTP_PASSWORD }}
         # Local root for source files that will be transferred to the destination, eg: "dist"
-        localRoot: ""  
+        localRoot: "/va/va-psd-dev/static"  
